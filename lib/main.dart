@@ -22,8 +22,11 @@ class MyHomePage extends StatelessWidget {
 
       // Column will always takes the size of its wider child
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           // Card will always takes the size of her parent
+
           Container(
             width: double.infinity,
             child: Card(
