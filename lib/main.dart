@@ -22,7 +22,13 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Card(
-            child: Text('ChART'),
+            color: Colors.indigo,
+            elevation: 5,
+            // a Card always takes the width of its child
+            child: Container(
+              width: double.infinity,
+              child: Text('ChART'),
+            ),
           ),
           Card(
             child: Text('List of Transactions'),
