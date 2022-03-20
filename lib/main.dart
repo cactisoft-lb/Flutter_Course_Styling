@@ -21,12 +21,11 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Card(
-            color: Colors.indigo,
-            elevation: 5,
-            // a Card always takes the width of its child
-            child: Container(
-              width: double.infinity,
+          Container(
+            width: double.infinity,
+            child: Card(
+              color: Colors.indigo,
+              elevation: 5,
               child: Text('ChART'),
             ),
           ),
