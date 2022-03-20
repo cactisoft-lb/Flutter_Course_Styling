@@ -19,8 +19,11 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter App'),
       ),
+
+      // Column will always takes the size of its wider child
       body: Column(
         children: <Widget>[
+          // Card will always takes the size of her parent
           Container(
             width: double.infinity,
             child: Card(
