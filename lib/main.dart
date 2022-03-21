@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import './models/transaction.dart';
 
@@ -80,7 +81,8 @@ class MyHomePage extends StatelessWidget {
                               fontSize: 18),
                         ),
                         Text(
-                          transaction.date.toString(),
+                          //using itl DateFormat
+                          DateFormat.yMMMd().format(transaction.date),
                           style: TextStyle(
                             color: Colors.grey[400],
                             fontSize: 15,
