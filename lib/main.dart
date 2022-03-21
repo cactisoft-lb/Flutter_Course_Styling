@@ -42,8 +42,13 @@ class MyHomePage extends StatelessWidget {
               child: Text('ChART'),
             ),
           ),
-          Card(
-            child: Text('List of Transactions'),
+          //(id: transaction.id, title: transaction.title, amount: transaction.amount, date: transaction.date),
+          Column(
+            children: transactions.map((transaction) {
+              return Card(
+                child: Text(transaction.title),
+              );
+            }).toList(),
           )
         ],
       ),
