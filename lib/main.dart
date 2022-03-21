@@ -22,6 +22,12 @@ class MyHomePage extends StatelessWidget {
         id: 't1', title: 'new Clothes', amount: 62.23, date: DateTime.now()),
     Transaction(id: 't2', title: 'Shoes', amount: 112.70, date: DateTime.now()),
   ];
+
+  // we will use these properties to store input data firing by the onChange TextField
+  // named property
+  String stringTitle;
+  String stringAmount;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,11 +62,13 @@ class MyHomePage extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: 'Title',
                     ),
+                    onChanged: (value) => stringTitle = value,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Amount',
                     ),
+                    onChanged: (value) => stringAmount = value,
                   ),
                   FlatButton(
                       child: Text(
@@ -71,7 +79,10 @@ class MyHomePage extends StatelessWidget {
                           fontSize: 18,
                         ),
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        debugPrint(stringTitle);
+                        debugPrint(stringAmount);
+                      }),
                 ],
               ),
             ),
