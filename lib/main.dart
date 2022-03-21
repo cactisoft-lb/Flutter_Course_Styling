@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 import './models/transaction.dart';
@@ -41,6 +42,38 @@ class MyHomePage extends StatelessWidget {
               color: Colors.indigo,
               elevation: 5,
               child: Text('ChART'),
+            ),
+          ),
+          //adding text field card
+          Card(
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              padding: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Title',
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Amount',
+                    ),
+                  ),
+                  FlatButton(
+                      child: Text(
+                        'transaction',
+                        style: TextStyle(
+                          color: Colors.purple[700],
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      onPressed: () {}),
+                ],
+              ),
             ),
           ),
           //(id: transaction.id, title: transaction.title, amount: transaction.amount, date: transaction.date),
