@@ -25,8 +25,10 @@ class MyHomePage extends StatelessWidget {
 
   // we will use these properties to store input data firing by the onChange TextField
   // named property
-  String stringTitle;
-  String stringAmount;
+  // String stringTitle;
+  // String stringAmount;
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -62,13 +64,13 @@ class MyHomePage extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: 'Title',
                     ),
-                    onChanged: (value) => stringTitle = value,
+                    controller: titleController,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Amount',
                     ),
-                    onChanged: (value) => stringAmount = value,
+                    controller: amountController,
                   ),
                   FlatButton(
                       child: Text(
@@ -80,8 +82,8 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        debugPrint(stringTitle);
-                        debugPrint(stringAmount);
+                        debugPrint(titleController.text);
+                        debugPrint(amountController.text);
                       }),
                 ],
               ),
