@@ -30,7 +30,7 @@ class NewTransaction extends StatelessWidget {
             ),
             FlatButton(
                 child: Text(
-                  'transaction',
+                  'add Transaction',
                   style: TextStyle(
                     color: Colors.purple[700],
                     fontWeight: FontWeight.bold,

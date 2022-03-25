@@ -11,8 +11,8 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 500,
-      child: ListView(
-        children: transactions.map((transaction) {
+      child: ListView.builder(
+        itemBuilder: (context, index) {
           return Card(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -21,7 +21,7 @@ class TransactionList extends StatelessWidget {
                 // Styling Container => adding some styling properties
                 Container(
                   child: Text(
-                    "\$${transaction.amount}",
+                    "\$${transactions[index].amount}",
                     //text Styling properties
                     style: TextStyle(
                       fontSize: 16,
@@ -40,7 +40,7 @@ class TransactionList extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      transaction.title,
+                      transactions[index].title,
                       style: TextStyle(
                           color: Colors.purple[400],
                           fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class TransactionList extends StatelessWidget {
                     ),
                     Text(
                       //using itl DateFormat
-                      DateFormat.yMMMd().format(transaction.date),
+                      DateFormat.yMMMd().format(transactions[index].date),
                       style: TextStyle(
                         color: Colors.grey[400],
                         fontSize: 15,
@@ -59,7 +59,12 @@ class TransactionList extends StatelessWidget {
               ],
             ),
           );
-        }).toList(),
+        },
+        itemCount: transactions
+            .length, // now flutter knows taht he will call the itemBuilder many times
+        // children: transactions.map((transaction) {
+
+        // }).toList(),
       ),
     );
   }
