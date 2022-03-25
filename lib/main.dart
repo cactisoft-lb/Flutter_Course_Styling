@@ -32,6 +32,14 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter App'),
+        actions: <Widget>[
+          IconButton(
+              onPressed: null,
+              icon: Icon(
+                Icons.add,
+                color: Colors.white,
+              )),
+        ],
       ),
 
       // Column will always takes the size of its wider child
@@ -55,6 +63,14 @@ class MyHomePage extends StatelessWidget {
             //(id: transaction.id, title: transaction.title, amount: transaction.amount, date: transaction.date),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        onPressed: null,
       ),
     );
   }
