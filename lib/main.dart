@@ -14,19 +14,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  // final List<Transaction> transactions = [
-  //   Transaction(
-  //       id: 't1', title: 'new Clothes', amount: 62.23, date: DateTime.now()),
-  //   Transaction(id: 't2', title: 'Shoes', amount: 112.70, date: DateTime.now()),
-  // ];
-
-  // we will use these properties to store input data firing by the onChange TextField
-  // named property
-  // String stringTitle;
-  // String stringAmount;
-  // final titleController = TextEditingController();
-  // final amountController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +21,7 @@ class MyHomePage extends StatelessWidget {
         title: Text('Flutter App'),
         actions: <Widget>[
           IconButton(
-              onPressed: null,
+              onPressed: () {},
               icon: Icon(
                 Icons.add,
                 color: Colors.white,
@@ -70,7 +57,7 @@ class MyHomePage extends StatelessWidget {
           Icons.add,
           color: Colors.white,
         ),
-        onPressed: null,
+        onPressed: () {},
       ),
     );
   }
