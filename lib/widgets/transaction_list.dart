@@ -5,6 +5,7 @@ import '../models/transaction.dart';
 class TransactionList extends StatelessWidget {
   // const ({ Key? key }) : super(key: key);
   final List<Transaction> transactions;
+
   TransactionList(this.transactions);
 
   @override
@@ -21,7 +22,7 @@ class TransactionList extends StatelessWidget {
                 // Styling Container => adding some styling properties
                 Container(
                   child: Text(
-                    "\$${transactions[index].amount}",
+                    "\$${transactions[index].amount.toStringAsFixed(2)}",
                     //text Styling properties
                     style: TextStyle(
                       fontSize: 16,
