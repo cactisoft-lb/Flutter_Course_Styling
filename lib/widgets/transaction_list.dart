@@ -27,13 +27,14 @@ class TransactionList extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Colors.purple,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   margin: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
                   padding: EdgeInsets.all(11),
                   decoration: BoxDecoration(
-                    border: Border.all(width: 2, color: Colors.purple),
+                    border: Border.all(
+                        width: 2, color: Theme.of(context).primaryColor),
                   ),
                 ),
                 //styling the body of the Card
@@ -43,7 +44,7 @@ class TransactionList extends StatelessWidget {
                     Text(
                       transactions[index].title,
                       style: TextStyle(
-                          color: Colors.purple[400],
+                          color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 18),
                     ),
@@ -51,7 +52,7 @@ class TransactionList extends StatelessWidget {
                       //using itl DateFormat
                       DateFormat.yMMMd().format(transactions[index].date),
                       style: TextStyle(
-                        color: Colors.grey[400],
+                        color: Theme.of(context).primaryColor,
                         fontSize: 15,
                       ),
                     ),
